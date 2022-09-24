@@ -21,29 +21,40 @@ userDetails:any={
 
   ngOnInit(): void {
   }
-login(){
- var acnum=this.acno
- var psw=this.psw
- let userDetails=this.userDetails
- if(acnum in userDetails){
-  if(psw==userDetails[acnum]['password']){
-alert('login success')
+// login(){
+//  var acnum=this.acno
+//  var psw=this.psw
+//  let userDetails=this.userDetails
+//  if(acnum in userDetails){
+//   if(psw==userDetails[acnum]['password']){
+// alert('login success')
+//   }
+//   else{
+//     alert('Incorrect password')
+//   }
+//  }
+//  else{
+//   alert(' user not exists or incorrect password')
+//  }
+// }
+
+login(a:any,p:any){
+  // console.log(a.value);
+  // console.log(p.value);
+  var acnum=a.value
+  var psw=p.value
+  let userDetails=this.userDetails
+  if(acnum in userDetails){
+   if(psw==userDetails[acnum]['password']){
+ alert('login success')
+   }
+   else{
+     alert('Incorrect password')
+   }
   }
   else{
-    alert('Incorrect password')
+   alert(' user not exists or incorrect password')
   }
  }
- else{
-  alert(' user not exists or incorrect password')
- }
-}
 
-acnoChange(event:any){
-  this.acno=event.target.value
-  console.log(this.acno)
-}
-pswChange(event:any){
-  this.psw=event.target.value
-  console.log(this.psw)
-}
 }
