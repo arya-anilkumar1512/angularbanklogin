@@ -1,0 +1,13 @@
+
+<div><h1 class="text-white ms-5 p-3">{{aim}}</h1></div>
+<div class="container border w-50 p-3 mt-5" style="background: rgba(57,87,79,0.5);border-radius: 25px;">
+    <div class="p-2 mt-2 text-center">
+        <h1 style="color:white">Log In Here</h1>
+    </div>
+    <div class="p-2 mt-2">
+        <input type="text" id="accnoid" [placeholder]="acc" (change)="acnoChange($event)" class="form-control"><br>
+        <input type="password" id="passid" placeholder="Password" (change)="pswChange($event)" class="form-control"><br>
+       <p class="text-white">Already Registered? <button (click)="login()" type="button" class="btn btn-secondary mt-3 ">Log In</button></p>
+     <p class="text-white">New User? <button onclick="" type="button" class="btn btn-secondary mt-3 ">Sign In</button></p> 
+        </div>
+</div>
