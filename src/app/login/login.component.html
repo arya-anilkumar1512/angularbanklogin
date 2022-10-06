@@ -4,10 +4,12 @@
     <div class="p-2 mt-2 text-center">
         <h1 style="color:white">Log In Here</h1>
     </div>
+    <form (ngSubmit)="login()">
     <div class="p-2 mt-2">
-        <input type="text" id="accnoid" [placeholder]="acc" #acno class="form-control"><br>
-        <input type="password" id="passid" placeholder="Password" #psw class="form-control"><br>
-       <p class="text-white">Already Registered? <button (click)="login(acno,psw)" type="button" class="btn btn-secondary mt-3 ">Log In</button></p>
-     <p class="text-white">New User? <button onclick="" type="button" class="btn btn-secondary mt-3 ">Sign In</button></p> 
+        <input type="text" id="accnoid" name="account" [placeholder]="acc" [(ngModel)]="acno" class="form-control"><br>
+        <input type="password" id="passid" name="pass" placeholder="Password"  [(ngModel)]="psw" class="form-control"><br>
+       <p class="text-white">Already Registered? <button  type="submit" class="btn btn-secondary mt-3 ">Log In</button></p>
+     <p class="text-white">New User? <a href="" style="text-decoration:none" routerLink="register" class="text-info">Sign In</a></p> 
         </div>
+    </form>
 </div>

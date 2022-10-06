@@ -1,0 +1,35 @@
+<div class="ps-5 pe-5 mt-3 ms-3">
+    <h1 style="color:white">Welcome {{user}}!</h1></div>
+
+<div class="ps-5 pe-5 ms-3">
+    <a routerLink="/transation">View Transation History</a>
+</div>
+<div class="container border w-50 p-3 mt-5" style="background: rgba(57,87,79,0.5);border-radius: 25px;">
+    <div class="p-2 mt-2 text-center">
+        <h1 style="color:white">Deposit</h1>
+    </div>
+    <form (ngSubmit)="deposit()">
+    <div class="p-2 mt-2">
+        <input type="text" id="acno" name="account" placeholder="Enter Account Number" [(ngModel)]="acnum" class="form-control"><br>
+        <input type="password" id="psw" name="pass" placeholder="Enter Password"  [(ngModel)]="pswrd" class="form-control"><br>
+        <input type="text" id="amt" name="amount" placeholder="Enter Amount to deposit"  [(ngModel)]="amnt" class="form-control"><br>
+       <button  type="submit" class="btn btn-secondary mt-3 ">Deposit </button>
+    
+        </div>
+    </form>
+</div>
+
+<div class="container border w-50 p-3 mt-5" style="background: rgba(57,87,79,0.5);border-radius: 25px;">
+    <div class="p-2 mt-2 text-center">
+        <h1 style="color:white">Withdraw</h1>
+    </div>
+    <form (ngSubmit)="withdraw()">
+    <div class="p-2 mt-2">
+        <input type="text" id="acno1" name="account1" placeholder="Enter Account Number" [(ngModel)]="acnum1" class="form-control"><br>
+        <input type="password" id="psw1" name="pass1" placeholder="Enter Password"  [(ngModel)]="pswrd1" class="form-control"><br>
+        <input type="text" id="amt1" name="amount1" placeholder="Enter Amount to withdraw"  [(ngModel)]="amnt1" class="form-control"><br>
+       <button  type="submit" class="btn btn-secondary mt-3 ">Withdraw </button>
+    
+        </div>
+    </form>
+</div>

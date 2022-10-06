@@ -1,0 +1,19 @@
+<div class="container border w-50 p-3 mt-5" >
+
+<table style="color: white;">
+   <thead>
+    <tr>
+      <th>Transation Type</th>
+      <th>Amount</th>
+    </tr>
+  </thead> 
+  <tbody>
+    <tr *ngFor="let i of transaction">
+      <td>{{i.type}}</td>
+      <td>{{i.amount}}</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <a routerLink="/dashboard">Home page</a>
+</div>
